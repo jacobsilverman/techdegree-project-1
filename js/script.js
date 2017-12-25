@@ -1,7 +1,8 @@
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", doThis, false);
-
+// console.log(document.styleSheets[0]);
+// console.log(document.styleSheets[0].media.mediaText);
 /*
  * Project Instruction (PI) 1of11: Create an array of JavaScript objects to
  * hold the data for your quotes. Name the array quotes. The quotes array
@@ -100,15 +101,27 @@ function printQuote(){
   return 0;
 }
 
+function addCSS(){
+  var sheet = document.styleSheets[2];
+  var newRule1 = '.tags { font-size: 1.25rem; letter-spacing: 0.05em;' +
+                 ' line-height: 1.1; text-align: right;' +
+                 ' margin-right: 4em; }';
+  var newRule2 = '.tags:before { content: "tag: "; }';
+  sheet.insertRule(newRule1);
+  sheet.insertRule(newRule2);
+  console.log(sheet.cssRules);
+}
+
 function doThis(){
+  addCSS();
   printQuote();
   setRandomColor();
 }
 
 /*
- * Refresh the quote after a set amount of time. For example,
- * every 30 seconds, make a new quote appear. (You can use the
- * setInterval() or setTimeout() method to do this -- see the links
+ * Extra Credit 3of3 Refresh the quote after a set amount of time.
+ * For example, every 30 seconds, make a new quote appear. (You can use
+ * the setInterval() or setTimeout() method to do this -- see the links
  * in the “Additional Resources” section).
 */
-setInterval(doThis, 5000);
+//setInterval(doThis, 5000);
