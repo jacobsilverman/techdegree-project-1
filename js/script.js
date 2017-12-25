@@ -75,4 +75,4 @@ function doThis(){
   setRandomColor();
 }
 
-setInterval(doThis, 5000)
+setInterval(doThis, 5000);
