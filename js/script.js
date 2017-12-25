@@ -1,8 +1,7 @@
+// note: I have attempted the 'Meets or Exceeds Expectations grade'
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", doThis, false);
-// console.log(document.styleSheets[0]);
-// console.log(document.styleSheets[0].media.mediaText);
 /*
  * Project Instruction (PI) 1of11: Create an array of JavaScript objects to
  * hold the data for your quotes. Name the array quotes. The quotes array
@@ -109,7 +108,6 @@ function addCSS(){
   var newRule2 = '.tags:before { content: "tag: "; }';
   sheet.insertRule(newRule1);
   sheet.insertRule(newRule2);
-  console.log(sheet.cssRules);
 }
 
 function doThis(){
@@ -124,4 +122,4 @@ function doThis(){
  * the setInterval() or setTimeout() method to do this -- see the links
  * in the “Additional Resources” section).
 */
-//setInterval(doThis, 5000);
+setInterval(doThis, 5000);
