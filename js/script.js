@@ -102,10 +102,13 @@ function printQuote(){
 function addCSS(){
   var sheet = document.styleSheets[2];
   var newRule1 = '.tags { font-size: 1.25rem; letter-spacing: 0.05em;' +
-                 ' line-height: 1.1; text-align: right;}';
+                 ' line-height: 1.1; text-align: right;' +
+                 ' margin-right: 4em; }';
   var newRule2 = '.tags:before { content: "tag: "; }';
+  var newRule3 = '.year { font-style: normal; }';
   sheet.insertRule(newRule1);
   sheet.insertRule(newRule2);
+  sheet.insertRule(newRule3);
 }
 
 function doThis(){
