@@ -62,9 +62,8 @@ function setRandomColor() {
 // 6of11 Create a function named getRandomQuote which:
 function getRandomQuote(){
   // 7of11 selects a random quote object from the quotes array
-  var randomFloat = Math.random();
-  var randomInteger = parseInt(randomFloat*quotes.length);
-  var randomQuote = quotes[randomInteger];
+  var randomNumber = Math.floor((Math.random() * quotes.length));
+  var randomQuote = quotes[randomNumber];
   // 8of11 returns the randomly selected quote object
   return randomQuote
 }
@@ -106,8 +105,10 @@ function addCSS(){
                  ' line-height: 1.1; text-align: right;' +
                  ' margin-right: 4em; }';
   var newRule2 = '.tags:before { content: "tag: "; }';
+  var newRule3 = '.year { font-style: normal; }';
   sheet.insertRule(newRule1);
   sheet.insertRule(newRule2);
+  sheet.insertRule(newRule3);
 }
 
 function doThis(){
